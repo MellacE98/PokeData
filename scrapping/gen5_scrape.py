@@ -42,16 +42,16 @@ GEN5_TITLES = [['Images'],  # 0
                ['Stats'],  # 30
                ['Stats - Zen Mode'],
                ['Stats - Sky Forme'],
-               ['Stats - Sandy Cloak'],
                ['Stats - Attack Forme'],
+               ['Stats - Speed Forme'],
+               ['Stats - Defense Forme'],
                ['Stats - Alternate Forms'],
                ['Stats - Therian Forme'],
-               ['Stats - Speed Forme'],
                ['Stats - Black Kyurem'],
-               ['Stats - Defense Forme'],
                ['Stats - White Kyurem'],
                ['Stats - Origin Forme'],
                ['Stats - Pirouette Forme'],
+               ['Stats - Sandy Cloak'],
                ['Stats - Trash Cloak']]  # 43
 
 
@@ -165,31 +165,127 @@ def addGen5(content, idx, table_rows, pokedex, number):
                 pokedex[number]['base_' + stat.lower().replace('sp. ', 'sp_')] = content[2][count]
 
     elif idx == 31:
-        pass
+        poke = copy.deepcopy(pokedex[number])
+        poke['name'] = poke['name'] + '_zen'
+        poke['number'] = poke['number'] + '.1'
+        poke['type_2'] = 'psychic'
+        for count, stat in enumerate(content[1]):
+            if count != 0:
+                poke['base_' + stat.lower().replace('sp. ', 'sp_')] = content[2][count]
+        pokedex[number + '.1'] = poke
+
     elif idx == 32:
-        pass
+        poke = copy.deepcopy(pokedex[number])
+        poke['name'] = poke['name'] + '_sky'
+        poke['number'] = poke['number'] + '.1'
+        poke['type_2'] = 'flying'
+        for count, stat in enumerate(content[1]):
+            if count != 0:
+                poke['base_' + stat.lower().replace('sp. ', 'sp_')] = content[2][count]
+        pokedex[number + '.1'] = poke
+
     elif idx == 33:
-        pass
+        poke = copy.deepcopy(pokedex[number])
+        poke['name'] = poke['name'] + '_attack'
+        poke['number'] = poke['number'] + '.1'
+        for count, stat in enumerate(content[1]):
+            if count != 0:
+                poke['base_' + stat.lower().replace('sp. ', 'sp_')] = content[2][count]
+        pokedex[number + '.1'] = poke
+
     elif idx == 34:
-        pass
+        poke = copy.deepcopy(pokedex[number])
+        poke['name'] = poke['name'] + '_speed'
+        poke['number'] = poke['number'] + '.2'
+        for count, stat in enumerate(content[1]):
+            if count != 0:
+                poke['base_' + stat.lower().replace('sp. ', 'sp_')] = content[2][count]
+        pokedex[number + '.2'] = poke
+
     elif idx == 35:
-        pass
+        poke = copy.deepcopy(pokedex[number])
+        poke['name'] = poke['name'] + '_defense'
+        poke['number'] = poke['number'] + '.3'
+        for count, stat in enumerate(content[1]):
+            if count != 0:
+                poke['base_' + stat.lower().replace('sp. ', 'sp_')] = content[2][count]
+        pokedex[number + '.3'] = poke
+
     elif idx == 36:
-        pass
+        poke = copy.deepcopy(pokedex[number])
+        poke['name'] = poke['name'] + '_alternate'
+        poke['number'] = poke['number'] + '.1'
+        for count, stat in enumerate(content[1]):
+            if count != 0:
+                poke['base_' + stat.lower().replace('sp. ', 'sp_')] = content[2][count]
+        pokedex[number + '.1'] = poke
+
     elif idx == 37:
-        pass
+        poke = copy.deepcopy(pokedex[number])
+        poke['name'] = poke['name'] + '_therian'
+        poke['number'] = poke['number'] + '.1'
+        for count, stat in enumerate(content[1]):
+            if count != 0:
+                poke['base_' + stat.lower().replace('sp. ', 'sp_')] = content[2][count]
+        pokedex[number + '.1'] = poke
+
     elif idx == 38:
-        pass
+        poke = copy.deepcopy(pokedex[number])
+        poke['name'] = poke['name'] + '_black'
+        poke['number'] = poke['number'] + '.1'
+        for count, stat in enumerate(content[1]):
+            if count != 0:
+                poke['base_' + stat.lower().replace('sp. ', 'sp_')] = content[2][count]
+        pokedex[number + '.1'] = poke
+
     elif idx == 39:
-        pass
+        poke = copy.deepcopy(pokedex[number])
+        poke['name'] = poke['name'] + '_white'
+        poke['number'] = poke['number'] + '.2'
+        for count, stat in enumerate(content[1]):
+            if count != 0:
+                poke['base_' + stat.lower().replace('sp. ', 'sp_')] = content[2][count]
+        pokedex[number + '.2'] = poke
+
     elif idx == 40:
-        pass
+        poke = copy.deepcopy(pokedex[number])
+        poke['name'] = poke['name'] + '_origin'
+        poke['number'] = poke['number'] + '.1'
+        for count, stat in enumerate(content[1]):
+            if count != 0:
+                poke['base_' + stat.lower().replace('sp. ', 'sp_')] = content[2][count]
+        pokedex[number + '.1'] = poke
+
     elif idx == 41:
-        pass
+        poke = copy.deepcopy(pokedex[number])
+        poke['name'] = poke['name'] + '_pirouette'
+        poke['number'] = poke['number'] + '.1'
+        poke['type_2'] = 'fight'
+        for count, stat in enumerate(content[1]):
+            if count != 0:
+                poke['base_' + stat.lower().replace('sp. ', 'sp_')] = content[2][count]
+        pokedex[number + '.1'] = poke
+
     elif idx == 42:
-        pass
+        poke = copy.deepcopy(pokedex[number])
+        poke['name'] = poke['name'] + '_sandy'
+        poke['number'] = poke['number'] + '.1'
+        poke['type_2'] = 'ground'
+        for count, stat in enumerate(content[1]):
+            if count != 0:
+                poke['base_' + stat.lower().replace('sp. ', 'sp_')] = content[2][count]
+        pokedex[number + '.1'] = poke
+
     elif idx == 43:
-        pass
+        poke = copy.deepcopy(pokedex[number])
+        poke['name'] = poke['name'] + '_trash'
+        poke['number'] = poke['number'] + '.2'
+        poke['type_2'] = 'steel'
+        for count, stat in enumerate(content[1]):
+            if count != 0:
+                poke['base_' + stat.lower().replace('sp. ', 'sp_')] = content[2][count]
+        pokedex[number + '.2'] = poke
+
     else:
         pass
 
