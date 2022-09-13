@@ -72,7 +72,6 @@ def scrapeGen4(links, key):
                 row = [i.text for i in td]
                 content.append(row)
             idx = GEN4_TITLES.index(content[0])
-            print(content[0])
             pokedex = addGen4(content, idx, table_rows, pokedex, number)
     return pokedex
 
